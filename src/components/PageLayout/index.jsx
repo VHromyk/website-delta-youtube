@@ -36,6 +36,10 @@ const GlobalStyles = createGlobalStyle`
   a:hover {
     color: inherit;
   }
+  
+  p {
+    word-break: break-word;
+  }
 
   code {
     font-family: ${(props) => props.theme.fontFamilyCode};
