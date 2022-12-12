@@ -7,10 +7,8 @@ const {
   collectionTemplatesBasePath,
 } = require("./config/pages");
 
-// TODO ADD this variables to the env files
 const YOUTUBE_PLAYLIST_ITEMS_API =
   "https://www.googleapis.com/youtube/v3/playlistItems";
-const YOUTUBE_API_KEY = "AIzaSyAvCt91PvL80P_y8FxgVHewi6-FycxFrcQ";
 
 const STREAM_LIST = {
   videos: [
@@ -100,7 +98,7 @@ const createNodesFromList = ({
   const getAllList = createListOfVideos(joinedList);
 
   const listWithImage = getAllList.filter((item) => item.thumbnail);
-
+  console.log("List with image ++++++", listWithImage);
   listWithImage.map((listItem, i) =>
     createNode({
       ...listItem,
